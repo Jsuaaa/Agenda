@@ -1,0 +1,35 @@
+<div class="p-4">
+    <div class="max-w-4xl mx-auto bg-white p-6 shadow-md rounded-lg">
+        <h1 class="text-2xl font-bold text-center mb-4">📅 Horario Semanal</h1>
+        <div class="overflow-x-auto">
+            <table class="w-full border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-2 border">Hora</th>
+                        <th class="p-2 border">Lunes</th>
+                        <th class="p-2 border">Martes</th>
+                        <th class="p-2 border">Miércoles</th>
+                        <th class="p-2 border">Jueves</th>
+                        <th class="p-2 border">Viernes</th>
+                        <th class="p-2 border">Sábado</th>
+                        <th class="p-2 border">Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (hour of schedule; track $index) {
+                        <tr class="text-center">
+                            <td class="p-2 border bg-gray-100 font-semibold">{{ hour }}</td>
+                            <td class="p-2 border"></td>
+                            <td class="p-2 border"></td>
+                            <td class="p-2 border"></td>
+                            <td class="p-2 border"></td>
+                            <td class="p-2 border"></td>
+                            <td class="p-2 border"></td>
+                            <td class="p-2 border"></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
