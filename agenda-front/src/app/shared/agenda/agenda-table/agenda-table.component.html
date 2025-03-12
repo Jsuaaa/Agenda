@@ -5,7 +5,6 @@
             <table class="w-full border border-gray-300">
                 <thead>
                     <tr class="bg-gray-200">
-                        <th class="p-2 border">Hora</th>
                         <th class="p-2 border">Lunes</th>
                         <th class="p-2 border">Martes</th>
                         <th class="p-2 border">Miércoles</th>
@@ -16,9 +15,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @for (hour of schedule; track $index) {
+                    <tr class="p-2 border">hola</tr>
+
+                    <!-- @for (hour of schedule; track $index) {
                         <tr class="text-center">
-                            <td class="p-2 border bg-gray-100 font-semibold">{{ hour }}</td>
                             <td class="p-2 border"></td>
                             <td class="p-2 border"></td>
                             <td class="p-2 border"></td>
@@ -27,7 +27,7 @@
                             <td class="p-2 border"></td>
                             <td class="p-2 border"></td>
                         </tr>
-                    }
+                    } -->
                 </tbody>
             </table>
         </div>

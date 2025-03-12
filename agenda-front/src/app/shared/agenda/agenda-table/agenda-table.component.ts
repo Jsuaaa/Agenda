@@ -8,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendaTableComponent implements OnInit{
 
-  // Variables para mostrar las horas en el horario de la agenda
-  schedule:String[] = [ "00:00", "02:00", "04:00", "06:00", "08:00", "10:00",
-                        "12:00", "14:00", "16:00", "18:00", "20:00", "22:00",
-                      ];
+  // Variable para guardar todos los elementos de la agenda
+  agenda:Object = {
+    lunes: {},
+    martes: {},
+    miercoles: {},
+    jueves: {},
+    viernes: {},
+    sabado: {},
+    domingo: {},
+  }
+
 
   ngOnInit(): void {
     

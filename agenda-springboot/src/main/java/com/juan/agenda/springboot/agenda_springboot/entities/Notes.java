@@ -1,10 +1,15 @@
 package com.juan.agenda.springboot.agenda_springboot.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
@@ -20,6 +25,14 @@ public class Notes {
     private String name;
     private String description;
     private boolean active;
+
+    @ManyToMany
+    @JoinTable(
+        name = "notes_days",
+        joinColumns = @JoinColumn(name = "notes"),
+        inverseJoinColumns = @JoinColumn(name = "days")
+    )
+    private List<Days> days;
 
     @PrePersist
     public void PrePersist(){
